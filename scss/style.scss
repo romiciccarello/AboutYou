@@ -1,0 +1,71 @@
+@import "./index";
+@import "./nosotros";
+@import "./servicios";
+@import "./porfolio";
+@import "./variables";
+
+
+/*Body*/
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+/*Encabezado*/
+.encabezado{
+    background: $color-verde;
+    padding-right: $padding-right - $padding-right;
+    padding-left: $padding-left - $padding-left;
+        &__nav{
+            padding-left: $padding-left;
+            padding-right: $padding-right;
+            color: $color-white;
+        }
+}
+
+
+
+/*Footer*/
+
+.text-center{
+    color: $color-white!important;
+  
+}
+  
+.text-lg-start{
+    background: $color-verde !important;
+}
+
+
+
+@mixin fondo_imag ($width, $height, $background-size, $background-repeat, $background-position){
+    width: $width;
+    height: $height;
+    background-size: $background-size;
+    background-position: $background-position;
+    background-repeat: $background-repeat;
+}
+
+ 
+@each $main in home__slogan, inicio__servicios, nosotros__slogan {
+    .#{$main}{
+        @if $main == home__slogan{
+            background-image: url(../images/bruce-mars-FWVMhUa_wbY-unsplash.jpg);
+            @include fondo_imag(100%, 550px, cover, center, no-repeat)
+        }
+        @else if $main == inicio__servicios{
+            background-image: url(../images/ayudar.jpg);
+            @include fondo_imag(100%, 650px, cover, center, no-repeat)
+        }
+        @else {
+            background-image: url(../images/kelly-sikkema-RrF4_CzuU18-unsplash.jpg);
+            @include fondo_imag(100%, 600px, cover, center, no-repeat)
+        }
+    }
+} 

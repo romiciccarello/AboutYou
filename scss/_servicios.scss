@@ -1,0 +1,55 @@
+@import "./variables";
+
+/*SERVICIOS*/
+
+.contenedor{
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.tarjeta{
+  background-color:blanchedalmond;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: $margin-bottom * 5;
+
+
+  &__thumbnail{
+    width: 650px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  &__enlace{
+    color: $color-verde;
+  }
+
+  &__text{
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: $margin-bottom * 2;
+  }
+
+}
+
+
+    
+  
+    
+
+  
+
+
+
+
+
+
+
